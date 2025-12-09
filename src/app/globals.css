@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --brand-navy: #0a1a35;
+  --brand-white: #ffffff;
+  --brand-electric: #2a7fff;
+  --brand-orange: #ff6b35;
+  --brand-slate: #8fa1c7;
+  --brand-deep-slate: #152346;
+  --background: var(--brand-navy);
+  --foreground: var(--brand-white);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy: var(--brand-navy);
+  --color-electric: var(--brand-electric);
+  --color-orange: var(--brand-orange);
+  --color-slate: var(--brand-slate);
+  --color-deep-slate: var(--brand-deep-slate);
+  --color-white: var(--brand-white);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-navy);
+    --foreground: var(--color-white);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
